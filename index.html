@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="UTF-8" />
+		<title>Guessing Game</title>
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+  <body>
+    <header>
+      <h1>GUESS THAT NUMBER</h1>
+    </header>
+
+    <main>
+      <section>
+      </br> <img src="img/guess-that-number.png" alt="guess-that-number">
+        <p>Image Source: http://www.guessthatnumber.com/</p>
+        <form>
+          <p>Enter a whole number between 1 and 100 in numerical form (i.e. 1, 2, 3, 4, . . . , 99, 100):</p>
+          <input type="number" id="userGuess" placeholder="Your Guess" min="1" max="100"/><br/>
+          <input type="submit" value="Submit My Guess" id="submitGuess" onclick="enterGuess()"/>
+          <input type="button" id="showguesses" onclick="showGuesses()" value="Show My Guesses" />
+          <input type="button" onclick="generateNewNumber(true)" value="New Game"/><br/>
+        </form>
+      </section>
+
+      <section>
+        <p id="results"></p>
+      </section>
+
+      <section>
+        <p id="duplicates"></p>
+      </section>
+
+      <section>
+        <p id="numGuesses"></p>
+      </section>
+
+      <section>
+        <p id="prevGuesses"></p>
+      </section>
+
+  	</main>
+    <script src="script.js"></script>
+  </body>
+</html>
