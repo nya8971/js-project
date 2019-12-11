@@ -32,6 +32,14 @@ var tries = document.getElementById("numGuesses");
         console.log("Number of Guesses: " + count);
         guessResults.innerHTML = "Ugh try a number that is larger than: " + guess;
       }
+      if(count === 50){
+          guessResults.innerHTML = "You've made it through 50 guesses. Will you ever guess correctly?";
+          if(guess == y){
+              count++;
+              guessResults.innerHTML = "CONGRATS! You guessed the answer correctly in: " + count + " guesses";
+              tries.innerHTML= "Number of Guesses: " + count;
+          }
+      }
       if(count === 99){
           guessResults.innerHTML = "Umm You have guessed everthing but the number! What is it?! ";
           if(guess == y){
